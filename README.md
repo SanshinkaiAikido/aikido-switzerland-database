@@ -15,7 +15,7 @@ with inside one the first line the correct hostname, database, username and pass
 In order to change data for existing aikidoka or to add new aikidoka, please follow the next instructions carefully:
 
 * Make sure you have enough experience with SQL queries in order to follow the next steps.
-* Run cript ./dump-pre.sh` to create a dump of the starting point. The resulting files are called pre-...-records.tsv and are also **not** tracked by git and may only exist temporarily on your machine.
+* Run script `./dump-pre.sh` to create a dump of the starting point. The resulting files are called pre-...-records.tsv and are also **not** tracked by git and may only exist temporarily on your machine.
 * Copy the file template-insert-records to insert-records.sh, alter the latter file and run it. Note to **only** add members which are training since first of January of this year **and** have at least sixth kyu. The file insert-records.sh is **not** tracked by git and may only exist temporarily on your machine.
 * Copy the file template-update-records to update-records.sh, alter the latter file and run it. Note, records are **never** deleted. The file update-records.sh is **not** tracked by git and may only exist temporarily on your machine.
 * Run script `./dump-post.sh` to create a dump of the end point. The resulting files are called post-...-records.tsv and are also **not** tracked by git and may only exist temporarily on your machine.
