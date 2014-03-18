@@ -1,0 +1,1 @@
+mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e "select \`group\`.name,count(\`group\`.id) from dojo,\`group\` where dojo.group_id = \`group\`.id group by \`group\`.id"|tail -n +5

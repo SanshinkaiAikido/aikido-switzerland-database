@@ -1,0 +1,1 @@
+mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e "select dojo.name,count(dojo.id) from aikidoka,dojo where active = 1 and aikidoka.dojo_id = dojo.id group by dojo.id"|tail -n +5
