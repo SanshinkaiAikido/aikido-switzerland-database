@@ -1,0 +1,6 @@
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set street='Street 12',zip='3500 AA',city='Utrecht' where id=9999"
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set active=0 where id=9999"
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set dateof01kyu='2000-12-31' where id=9999"
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set charge_card=1 where id=9999"
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set female=1 where id=9999"
+#mysql --silent -h `cat connection-hostname` -u `cat connection-username` -p`cat connection-password` -D `cat connection-database` -v -e " update aikidoka set charge_card=1 where id=9999"
