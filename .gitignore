@@ -1,8 +1,11 @@
+!/README.md
 connection-*
 *.tsv
 insert-records.sh
 update-records.sh
+*.pdf
 *.png
 *.gv
+*.md
 insert.sh
 update.sh
