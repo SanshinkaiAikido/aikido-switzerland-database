@@ -9,3 +9,4 @@ update-records.sh
 *.md
 insert.sh
 update.sh
+email-addresses.txt*

@@ -24,7 +24,17 @@ for line in reader(open('dojos.tsv'), delimiter='\t'):
     else:
         dojos[id] = {'name':name, 'dojocho':dojocho, 'gid':gid, 'active':True, 'members':0, 'yudansha':0, 'females':0, 'males':0, 'female_rate':0,  'male_rate':0}
 
+dans8 = []
+dans7 = []
+dans6 = []
+dans5 = []
+dans4 = []
+dans3 = []
+dans2 = []
+dans1 = []
 for line in reader(open('aikidokas.tsv'), delimiter='\t'):
+    id = line[0]
+    name = line[1]
     female = line[2]
     dan1 = line[24]
     dan2 = line[25]
@@ -44,6 +54,22 @@ for line in reader(open('aikidokas.tsv'), delimiter='\t'):
         dojos[dojo_id]['yudansha'] += 1
     if female == '1':
         dojos[dojo_id]['females'] += 1
+    if dan8 != '' and dan8 != 'NULL':
+        dans8.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan8))
+    elif dan7 != '' and dan7 != 'NULL':
+        dans7.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan7))
+    elif dan6 != '' and dan6 != 'NULL':
+        dans6.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan6))
+    elif dan5 != '' and dan5 != 'NULL':
+        dans5.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan5))
+    elif dan4 != '' and dan4 != 'NULL':
+        dans4.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan4))
+    elif dan3 != '' and dan3 != 'NULL':
+        dans3.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan3))
+    elif dan2 != '' and dan2 != 'NULL':
+        dans2.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan2))
+    elif dan1 != '' and dan1 != 'NULL':
+        dans1.append('{}, {}, {}, {}'.format(dojos[dojo_id]['name'], name, id, dan1))
 
 members = 0
 yudansha = 0
@@ -141,3 +167,22 @@ for gid, gvalues in sorted(groups.items()):
             markdown.write('{:<41} |   {:>3}   |    {:>3}   |   {:>3}   |   {:>3}   |   {}:{}\n'.format('- Dojo "{}"'.format(values['name']), values['members'], values['yudansha'], values['females'], values['males'], values['female_rate'], values['male_rate']))
 markdown.close()
 copyfile('{}.md'.format(base), '{}_{}.md'.format(base, now_name))
+
+print('\n8th dan ({}):'.format(len(dans8)))
+print('\n'.join(sorted(dans8)))
+print('\n7th dan ({}):'.format(len(dans7)))
+print('\n'.join(sorted(dans7)))
+print('\n6th dan ({}):'.format(len(dans6)))
+print('\n'.join(sorted(dans6)))
+print('\n5th dan ({}):'.format(len(dans5)))
+print('\n'.join(sorted(dans5)))
+print('\n4th dan ({}):'.format(len(dans4)))
+print('\n'.join(sorted(dans4)))
+print('\n3rd dan ({}):'.format(len(dans3)))
+print('\n'.join(sorted(dans3)))
+print('\n2nd dan ({}):'.format(len(dans2)))
+print('\n'.join(sorted(dans2)))
+print('\n1st dan ({}):'.format(len(dans1)))
+print('\n'.join(sorted(dans1)))
+
+#TODO check total numbers and write to tsv

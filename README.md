@@ -89,5 +89,6 @@ List all language codes and language names
 
 ## Overall reports
 
-sudo npm install -g markdown-pdf
-markdown-pdf membership_...md
+    sudo pip3 install graphviz
+    sudo npm install -g markdown-pdf
+    markdown-pdf membership_...md
